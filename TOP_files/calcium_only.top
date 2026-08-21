@@ -1,0 +1,28 @@
+#include "/home/meenal/Calcium_Abeta/ITP/ff.itp"
+#include "/home/meenal/Calcium_Abeta/ITP/water.md.itp"
+#include "/home/meenal/Calcium_Abeta/ITP/ions.itp"
+
+#include "/home/meenal/Calcium_Abeta/ITP/popc.itp"
+#ifdef POPC_PO4
+#include "/home/meenal/Calcium_Abeta/itps/popc_po4.itp"
+#endif
+
+#include "/home/meenal/Calcium_Abeta/ITP/pops.itp"
+#ifdef POPS_PO4
+#include "/home/meenal/Calcium_Abeta/itps/pops_po4.itp"
+#endif
+
+[ system ]
+; name
+INSANE! Membrane UpperLeaflet>POPS:POPC=85.0:85.0 LowerLeaflet>PC_L:PS_L=85.0:85.0 in water
+
+[ molecules ]
+; name  number
+POPC            118
+POPS            51
+POPC            118
+POPS		51
+PW              12820
+CA		80
+CL		160
+NA		102
